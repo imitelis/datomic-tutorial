@@ -1,10 +1,11 @@
 # datomic-tutorial
 
-A Clojure library designed to ... well, that part is up to you.
+A Datomic tutorial
 
 ## Usage
 
-FIXME
+  *  `docker build -t datomic-pro-dev .`
+  *  `docker run -it --rm   -p 4334:4334   -p 4335:4335   --name datomic-transactor   datomic-pro-dev`
 
 ## License
 

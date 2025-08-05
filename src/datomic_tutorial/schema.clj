@@ -9,4 +9,4 @@
               :db/valueType   :db.type/long
               :db/cardinality :db.cardinality/one}])
 
-(d/transact conn schema)
+;; (d/transact conn schema)

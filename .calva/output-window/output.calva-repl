@@ -36,8 +36,15 @@ You can configure this with the setting:
 ;   - See https://calva.io/connect-sequences/
 ; 
 
-; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
-; Using host:port 127.0.0.1:33453 ...
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:42889 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
@@ -46,39 +53,364 @@ clj꞉datomic-tutorial.core꞉> 
 "Please see https://calva.io/output/#about-stdout-in-the-repl-window
 about why stdout printed to this file is prepended with `;` to be line comments."
 clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
 ; Jack-in done.
 clj꞉datomic-tutorial.core꞉> 
-; Execution error (FileNotFoundException) at datomic-tutorial.core/eval9257 (form-init6105788113816452645.clj:3).
-; Could not locate datomic/api__init.class, datomic/api.clj or datomic/api.cljc on classpath.
+#'datomic-tutorial.core/db-uri
 clj꞉datomic-tutorial.core꞉> 
-; Execution error (FileNotFoundException) at datomic-tutorial.core/eval10570 (form-init6105788113816452645.clj:3).
-; Could not locate datomic/api__init.class, datomic/api.clj or datomic/api.cljc on classpath.
+false
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:4:11).
-; No such namespace: d
+false
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:4:11).
-; No such namespace: d
+#'datomic-tutorial.core/conn
 clj꞉datomic-tutorial.core꞉> 
-#'datomic-tutorial.core/uri
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/deserialize-exception (error.clj:167).
+; :db.error/not-an-entity Unable to resolve entity: :person/name
 clj꞉datomic-tutorial.core꞉> 
-; Execution error (FileNotFoundException) at datomic-tutorial.core/eval10572 (form-init6105788113816452645.clj:4).
-; Could not locate datomic/api__init.class, datomic/api.clj or datomic/api.cljc on classpath.
+#'datomic-tutorial.core/schema-tx
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:8:11).
-; No such namespace: d
+{:db-before datomic.db.Db@45ee73a2,
+ :db-after datomic.db.Db@8f7a56ef,
+ :tx-data
+ [#datom[13194139534314 50 #inst "2025-08-05T17:23:34.095-00:00" 13194139534314 true] #datom[72 10 :person/name 13194139534314 true] #datom[72 40 23 13194139534314 true] #datom[72 41 35 13194139534314 true] #datom[72 62 "A person's name" 13194139534314 true] #datom[0 13 72 13194139534314 true]],
+ :tempids {-9223300668110598133 72}}
 clj꞉datomic-tutorial.core꞉> 
-#'datomic-tutorial.core/uri
+{:db-before datomic.db.Db@933b4b72,
+ :db-after datomic.db.Db@bab6feda,
+ :tx-data
+ [#datom[13194139534315 50 #inst "2025-08-05T17:23:43.127-00:00" 13194139534315 true] #datom[17592186045420 72 "Alice" 13194139534315 true]],
+ :tempids {-9223350046623220292 17592186045420}}
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:12:11).
-; No such namespace: d
+{:db-before datomic.db.Db@bab6feda,
+ :db-after datomic.db.Db@3cc11616,
+ :tx-data
+ [#datom[13194139534317 50 #inst "2025-08-05T17:23:45.487-00:00" 13194139534317 true] #datom[17592186045422 72 "Alice" 13194139534317 true]],
+ :tempids {-9223350046623220294 17592186045422}}
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:9:11).
-; No such namespace: d
+#{[17592186045422 "Alice"] [17592186045420 "Alice"]}
 clj꞉datomic-tutorial.core꞉> 
-; Execution error (FileNotFoundException) at datomic-tutorial.core/eval10574 (form-init6105788113816452645.clj:5).
-; Could not locate datomic/api__init.class, datomic/api.clj or datomic/api.cljc on classpath.
+#{[17592186045422 "Alice"] [17592186045420 "Alice"]}
 clj꞉datomic-tutorial.core꞉> 
-; Syntax error compiling at (src/datomic_tutorial/core.clj:12:11).
-; No such namespace: d
+#{[17592186045422 "Alice"] [17592186045420 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/person-schema
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@3cc11616,
+ :db-after datomic.db.Db@15dd584e,
+ :tx-data
+ [#datom[13194139534319 50 #inst "2025-08-05T20:43:52.086-00:00" 13194139534319 true] #datom[73 10 :person/id 13194139534319 true] #datom[73 40 23 13194139534319 true] #datom[73 42 38 13194139534319 true] #datom[73 41 35 13194139534319 true] #datom[73 62 "Unique person ID" 13194139534319 true] #datom[72 62 "Person's name" 13194139534319 true] #datom[72 62 "A person's name" 13194139534319 false] #datom[0 13 73 13194139534319 true]],
+ :tempids {-9223300668110598132 73, -9223300668110598131 72}}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@5114e3a5,
+ :db-after datomic.db.Db@316b8f51,
+ :tx-data [#datom[13194139534320 50 #inst "2025-08-05T20:43:57.177-00:00" 13194139534320 true]],
+ :tempids {-9223300668110598130 73, -9223300668110598129 72}}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@316b8f51,
+ :db-after datomic.db.Db@dc89bb68,
+ :tx-data
+ [#datom[13194139534321 50 #inst "2025-08-05T20:44:18.982-00:00" 13194139534321 true] #datom[17592186045426 73 "person-001" 13194139534321 true] #datom[17592186045426 72 "Alice" 13194139534321 true]],
+ :tempids {-9223300668110598128 17592186045426}}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@dc89bb68,
+ :db-after datomic.db.Db@8b626a3d,
+ :tx-data
+ [#datom[13194139534323 50 #inst "2025-08-05T20:44:29.206-00:00" 13194139534323 true] #datom[17592186045426 72 "Alice Cooper" 13194139534323 true] #datom[17592186045426 72 "Alice" 13194139534323 false]],
+ :tempids {}}
+clj꞉datomic-tutorial.core꞉> 
+#{["Alice Cooper"]}
+clj꞉datomic-tutorial.core꞉> 
+; Syntax error compiling at (src/datomic_tutorial/core.clj:56:1).
+; Unable to resolve symbol: history-db in this context
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/history-db
+clj꞉datomic-tutorial.core꞉> 
+#{["Alice" true 13194139534321] ["Alice" false 13194139534323] ["Alice Cooper" true 13194139534323]}
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/tx->inst
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/tx->inst
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#{["Alice" true 13194139534321] ["Alice" false 13194139534323] ["Alice Cooper" true 13194139534323]}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@8b626a3d,
+ :db-after datomic.db.Db@dc16964d,
+ :tx-data [#datom[13194139534324 50 #inst "2025-08-05T20:59:12.888-00:00" 13194139534324 true]],
+ :tempids {-9223300668110598127 73, -9223300668110598126 72}}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@dc16964d,
+ :db-after datomic.db.Db@d405e84e,
+ :tx-data
+ [#datom[13194139534325 50 #inst "2025-08-05T20:59:14.593-00:00" 13194139534325 true] #datom[17592186045426 72 "Alice" 13194139534325 true] #datom[17592186045426 72 "Alice Cooper" 13194139534325 false]],
+ :tempids {-9223300668110598125 17592186045426}}
+clj꞉datomic-tutorial.core꞉> 
+#{["Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@d405e84e,
+ :db-after datomic.db.Db@750a3aa3,
+ :tx-data
+ [#datom[13194139534326 50 #inst "2025-08-05T20:59:21.092-00:00" 13194139534326 true] #datom[17592186045426 72 "Alice Cooper" 13194139534326 true] #datom[17592186045426 72 "Alice" 13194139534326 false]],
+ :tempids {}}
+clj꞉datomic-tutorial.core꞉> 
+#{["Alice Cooper"]}
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; TypeError: Cannot read properties of undefined (reading 'label')
+; Aborting jack-in.
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:35445 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:41925 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+nil
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+nil
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+nil
+nil
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+nil
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+nil
+nil
+nil
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/schema-tx
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:39095 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (JdbcSQLNonTransientConnectionException) at org.h2.message.DbException/getJdbcSQLException (DbException.java:678).
+; Remote connections to this server are not allowed, see -tcpAllowOthers [90117-214]
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+true
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/conn
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/schema-tx
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/name
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@352fc74a,
+ :db-after datomic.db.Db@9a7cb63a,
+ :tx-data
+ [#datom[13194139534312 50 #inst "2025-08-05T21:37:11.916-00:00" 13194139534312 true] #datom[72 10 :person/name 13194139534312 true] #datom[72 40 23 13194139534312 true] #datom[72 41 35 13194139534312 true] #datom[72 62 "A person's name" 13194139534312 true] #datom[0 13 72 13194139534312 true]],
+ :tempids {-9223300668110598134 72}}
+clj꞉datomic-tutorial.core꞉> 
+{:db-before datomic.db.Db@d13d63d6,
+ :db-after datomic.db.Db@cdcbe778,
+ :tx-data
+ [#datom[13194139534313 50 #inst "2025-08-05T21:37:13.504-00:00" 13194139534313 true] #datom[17592186045418 72 "Alice" 13194139534313 true]],
+ :tempids {-9223350046623220290 17592186045418}}
+clj꞉datomic-tutorial.core꞉> 
+#{[17592186045418 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:38467 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+false
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/conn
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:46797 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+false
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/conn
+clj꞉datomic-tutorial.core꞉> 
+#{[17592186045421 "Alice Cooper"] [17592186045418 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+#{[17592186045421 "Alice Cooper"] [17592186045418 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+#{[17592186045421 "Alice Cooper"] [17592186045418 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+#{[17592186045421 "Alice Cooper"] [17592186045418 "Alice"]}
+clj꞉datomic-tutorial.core꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /home/cogito/Desktop/datomic-tutorial; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:39597 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉datomic-tutorial.core꞉> 
+; Jack-in done.
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+; Execution error (ConnectException) at sun.nio.ch.Net/pollConnect (Net.java:-2).
+; Connection refused
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+nil
+clj꞉datomic-tutorial.core꞉> 
+#'datomic-tutorial.core/db-uri
+clj꞉datomic-tutorial.core꞉> 
+true
 clj꞉datomic-tutorial.core꞉> 
