@@ -86,4 +86,12 @@
     :db/doc         "Roles assigned to a person"
     :db.install/_attribute :db.part/db}])
 
-(d/transact conn {:tx-data updated-person-schema})
+(d/transact conn updated-person-schema)
+
+(d/q '[:find ?val
+       :in $ ?id
+       :where
+       [?e :person/id ?id]
+       [?e :person/roles ?val]]
+     history-db "person-001")
+

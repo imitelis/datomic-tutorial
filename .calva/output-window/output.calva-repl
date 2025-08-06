@@ -194,3 +194,114 @@ clj꞉datomic-tutorial.schemas.person꞉> 
 clj꞉datomic-tutorial.schemas.person꞉> 
 #'datomic-tutorial.schemas.person/tx->inst
 clj꞉datomic-tutorial.schemas.person꞉> 
+#'datomic-tutorial.schemas.person/updated-person-schema
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (ClassCastException) at datomic.api/transact (api.clj:105).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.List (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+clj꞉datomic-tutorial.schemas.person꞉> 
+#{["Alice Cooper" true 13194139534320] ["Alice" true 13194139534316] ["Alice" false 13194139534320]}
+clj꞉datomic-tutorial.schemas.person꞉> 
+#<promise$settable_future$reify__12725@1e1e1e09: 
+  {:db-before datomic.db.Db@6bf68a0f,
+   :db-after datomic.db.Db@e1c8cbb0,
+   :tx-data
+   [#datom[13194139534321 50 #inst "2025-08-06T00:31:14.623-00:00" 13194139534321 true] #datom[74 10 :person/age 13194139534321 true] #datom[74 40 22 13194139534321 true] #datom[74 41 35 13194139534321 true] #datom[74 62 "Person's age" 13194139534321 true] #datom[75 10 :person/roles 13194139534321 true] #datom[75 40 21 13194139534321 true] #datom[75 41 36 13194139534321 true] #datom[75 62 "Roles assigned to a person" 13194139534321 true] #datom[0 13 74 13194139534321 true] #datom[0 13 75 13194139534321 true]],
+   :tempids {-9223300668110598129 74, -9223300668110598128 75}}>
+clj꞉datomic-tutorial.schemas.person꞉> 
+#{["Alice Cooper" true 13194139534320] ["Alice" true 13194139534316] ["Alice" false 13194139534320]}
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (IllegalArgumentException) at datomic.extensions/get-else (extensions.clj:51).
+; nil default value not supported
+clj꞉datomic-tutorial.schemas.person꞉> 
+#<promise$settable_future$reify__12725@4dbfbc5e: 
+  {:db-before datomic.db.Db@16536fcb,
+   :db-after datomic.db.Db@24c013b5,
+   :tx-data [#datom[13194139534322 50 #inst "2025-08-06T00:32:04.322-00:00" 13194139534322 true]],
+   :tempids {-9223300668110598127 74, -9223300668110598126 75}}>
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (IllegalArgumentException) at datomic.extensions/get-else (extensions.clj:51).
+; nil default value not supported
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/age
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+datomic.datalog/eval-rule (datalog.clj:1480)
+datomic.datalog/eval-rule (datalog.clj:1460)
+datomic.datalog/eval-rule (datalog.clj:1439)
+datomic.datalog/eval-query (datalog.clj:1503)
+datomic.datalog/eval-query (datalog.clj:1486)
+datomic.datalog/qsqr (datalog.clj:1593)
+datomic.measure.query-stats/with-phase-stats (query_stats.clj:61)
+datomic.measure.query-stats/with-phase-stats (query_stats.clj:48)
+datomic.datalog/qsqr (datalog.clj:1592)
+datomic.datalog/qsqr (datalog.clj:1531)
+datomic.datalog/qsqr (datalog.clj:1549)
+datomic.datalog/qsqr (datalog.clj:1531)
+datomic.query/q* (query.clj:757)
+datomic.query/q* (query.clj:744)
+datomic.query/q (query.clj:796)
+datomic.query/q (query.clj:793)
+datomic.api/q (api.clj:44)
+datomic.api/q (api.clj:42)
+datomic-tutorial.schemas.person/eval19827 (NO_SOURCE_FILE:91)
+clojure.lang.Compiler/eval (Compiler.java:7194)
+nrepl.middleware.interruptible-eval/evaluator (interruptible_eval.clj:106)
+nrepl.middleware.interruptible-eval/evaluator (interruptible_eval.clj:101)
+nrepl.middleware.session/session-exec (session.clj:230)
+nrepl.SessionThread/run (SessionThread.java:21)
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+#<promise$settable_future$reify__12725@2b034909: 
+  {:db-before datomic.db.Db@24c013b5,
+   :db-after datomic.db.Db@fd4e5a95,
+   :tx-data [#datom[13194139534323 50 #inst "2025-08-06T00:34:53.831-00:00" 13194139534323 true]],
+   :tempids {-9223300668110598125 74, -9223300668110598124 75}}>
+clj꞉datomic-tutorial.schemas.person꞉> 
+#'datomic-tutorial.schemas.person/updated-person-schema
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
+#{["Alice Cooper" true 13194139534320] ["Alice" true 13194139534316] ["Alice" false 13194139534320]}
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (AssertionError) at datomic.datalog/unifying-vars (datalog.clj:834).
+; Assert failed: All clauses in 'or' must use same set of vars, had [#{?roles ?e} #{?e}]
+; (apply = uvs)
+clj꞉datomic-tutorial.schemas.person꞉> 
+nil
+clj꞉datomic-tutorial.queries.person꞉> 
+nil
+clj꞉datomic-tutorial.queries.person꞉> 
+#{}
+clj꞉datomic-tutorial.queries.person꞉> 
+#{[17592186045418]}
+clj꞉datomic-tutorial.queries.person꞉> 
+#{}
+clj꞉datomic-tutorial.queries.person꞉> 
+#{[17592186045418]}
+clj꞉datomic-tutorial.queries.person꞉> 
+#'datomic-tutorial.schemas.person/updated-person-schema
+clj꞉datomic-tutorial.schemas.person꞉> 
+#<promise$settable_future$reify__12725@108ddb57: 
+  {:db-before datomic.db.Db@fd4e5a95,
+   :db-after datomic.db.Db@e0d2fe73,
+   :tx-data [#datom[13194139534324 50 #inst "2025-08-06T00:52:10.192-00:00" 13194139534324 true]],
+   :tempids {-9223300668110598123 74, -9223300668110598122 75}}>
+clj꞉datomic-tutorial.schemas.person꞉> 
+; Execution error (Exceptions$IllegalArgumentExceptionInfo) at datomic.error/arg (error.clj:79).
+; :db.error/not-an-entity Unable to resolve entity: :person/roles
+clj꞉datomic-tutorial.schemas.person꞉> 
