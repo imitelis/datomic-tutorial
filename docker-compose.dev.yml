@@ -1,0 +1,21 @@
+services:
+  datomic-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: datomic-pro-dev
+    container_name: datomic-dev
+    ports:
+      - "4334:4334"
+      - "4335:4335"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - datomic_data:/opt/datomic/data
+
+  debug-helper:    
+    image: busybox
+ 
+volumes:
+  datomic_data:

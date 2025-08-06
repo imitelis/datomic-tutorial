@@ -4,8 +4,9 @@ A Datomic tutorial
 
 ## Usage
 
-  *  `docker build -t datomic-pro-dev .`
+  *  `docker build -f Dockerfile.dev -t datomic-pro-dev .`
   *  `docker run -it --rm   -p 4334:4334   -p 4335:4335   --name datomic-transactor   datomic-pro-dev`
+  *  `docker-compose -f docker-compose.dev.yml up`
 
 ## License
 
