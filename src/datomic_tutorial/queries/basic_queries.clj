@@ -1,7 +1,6 @@
 (ns datomic-tutorial.queries.basic-queries
-  (:require [datomic-tutorial.core :refer [conn]]))
-  
-(require '[datomic.api :as d])
+  (:require [datomic.api :as d]
+            [datomic-tutorial.core :refer [conn]]))
 
 ;; Datoms look like
 ;; [<e-id>  <attribute>      <value>          <tx-id>]

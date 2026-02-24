@@ -1,7 +1,6 @@
 (ns datomic-tutorial.queries.more-queries 
-  (:require [datomic-tutorial.core :refer [conn]]))
-  
-(require '[datomic.api :as d])
+  (:require [datomic.api :as d]
+            [datomic-tutorial.core :refer [conn]]))
 
 ;; A datom is a 4-tuple [eid attr val tx]
 

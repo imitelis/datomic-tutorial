@@ -1,7 +1,6 @@
 (ns datomic-tutorial.queries.data-patterns
-  (:require [datomic-tutorial.core :refer [conn]]))
-
-(require '[datomic.api :as d])
+  (:require [datomic.api :as d]
+            [datomic-tutorial.core :refer [conn]]))
 
 ;; Data patterns in a :where clause:
 (d/q '[:find ?title

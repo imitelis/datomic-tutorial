@@ -1,8 +1,6 @@
 (ns datomic-tutorial.queries.parametrized-queries
-  (:require [datomic-tutorial.core :refer [conn]]))
-  
-(require '[datomic.api :as d])
-
+  (:require [datomic.api :as d]
+            [datomic-tutorial.core :refer [conn]]))
 
 ;; Original query
 (d/q '[:find ?title 
