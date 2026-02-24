@@ -1,4 +1,4 @@
-(ns datomic-tutorial.queries.data-patterns
+(ns datomic-tutorial.queries.02-data-patterns
   (:require [datomic.api :as d]
             [datomic-tutorial.core :refer [conn]]))
 

@@ -1,4 +1,4 @@
-(ns datomic-tutorial.queries.transformation-functions
+(ns datomic-tutorial.queries.06-transformation-functions
   (:require [datomic.api :as d]
             [datomic-tutorial.core :refer [conn]]))
 

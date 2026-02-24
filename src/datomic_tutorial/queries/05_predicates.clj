@@ -1,4 +1,4 @@
-(ns datomic-tutorial.queries.predicates
+(ns datomic-tutorial.queries.05-predicates
   (:require [datomic.api :as d]
             [datomic-tutorial.core :refer [conn]]))
 

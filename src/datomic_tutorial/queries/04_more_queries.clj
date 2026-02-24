@@ -1,4 +1,4 @@
-(ns datomic-tutorial.queries.more-queries 
+(ns datomic-tutorial.queries.04-more-queries 
   (:require [datomic.api :as d]
             [datomic-tutorial.core :refer [conn]]))
 
