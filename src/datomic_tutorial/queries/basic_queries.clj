@@ -14,19 +14,11 @@
 ;; ...
 
 ;; Basic query
-;; [:find ?e
-;;  :where
-;;  [?e :person/name "Ridley Scott"]]
-  
 (d/q '[:find ?e
        :where [?e :person/name "Ridley Scott"]]
      (d/db conn))
 
 ;; Same query without trailing
-;; [:find ?e
-;;  :where
-;;  [?e :person/name "Ridley Scott" _]]
-
 (d/q '[:find ?e
        :where [?e :person/name "Ridley Scott" _]]
      (d/db conn))

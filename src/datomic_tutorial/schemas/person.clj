@@ -94,4 +94,3 @@
        [?e :person/id ?id]
        [?e :person/roles ?val]]
      history-db "person-001")
-

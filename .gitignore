@@ -16,10 +16,3 @@ out/
 # Ignore Lein files
 .lein-env
 .lein-failures
-
-# Ignore config.edn
-# resources/config.edn
-
-# Ignore databases
-# clothes.db
-test.db
