@@ -2,8 +2,6 @@
   (:require [datomic.api :as d]
             [datomic-tutorial.core :refer [conn]]))
 
-;; Predicates
-
 ;; Find all movies released before 1984
 (d/q '[:find ?title
        :where
