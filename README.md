@@ -1,6 +1,6 @@
 # datomic-tutorial
 
-A Datomic tutorial
+A Datomic tutorial. The queries part taken from `https://learn-some.com/`. While figured out how to load a Datomic pro instance and run transactions on a Docker container.
 
 ## Usage
 
